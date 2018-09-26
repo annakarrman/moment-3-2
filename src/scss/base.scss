@@ -1,0 +1,121 @@
+@import 'reset';
+@import 'primary';
+@import 'mainmenu';
+@import 'dropdown';
+
+@mixin box-shadow($property) {
+    -webkit-box-shadow: $property;
+    -moz-box-shadow: $property;
+    box-shadow: $property;
+}
+
+$p: 3;
+
+/* headers */
+header {
+    background-color: $primary-color;
+    text-align: center;
+    font-size: 3em;
+    padding: 3%;
+}
+h1 {
+    color: white;
+    padding-top: 4%;
+    padding-bottom: 4%;
+}
+
+h2 {
+    @extend h1;
+    font-size: 2em;
+    margin-bottom: 1%;
+    background-color: $second-color;
+    padding: 2%;
+}
+
+
+
+/* text */
+p, a:link {
+    font-size: $primary-fontsize;
+    font-family: $primary-font;
+    letter-spacing: 0.07em;
+}
+p {
+    line-height: 1.1em;
+    @if $p > 5 {
+        color: gray;
+    } @else {
+        color: black;
+    }
+}
+
+/* images */
+img {
+    width: 100%;
+    max-width: 300px;
+    margin: 1%;
+    border: 1px solid $second-color;
+    border-radius: 20px;
+    @include box-shadow(2px 2px 20px -3px rgba(0,0,0,0.75));
+}
+
+/* main content */
+#maincontent {
+    margin: 0 auto;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    display: flex;
+}
+
+#text {
+    width: 70%;
+    margin-right: 2%;
+}
+#text p {
+    margin-left: 1%;
+}
+#images {
+    width: 30%;
+    max-width: 500px;
+}
+
+
+/* footer */
+footer {
+    background-color: $third-color;
+    padding: 4%;
+    margin-top: 1%;
+}
+footer p {
+    color: white;
+}
+
+
+/* media quieres */
+@media screen and (min-width: 601px) {
+    #mainmenu-smallscreen {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    #mainmenu {
+        display: none;
+    }
+    #wrapper {
+        margin-top: 50px;
+    }
+    #maincontent {
+        display: block;
+    }
+    #images {
+        width: 100%;
+    }
+    #text {
+        width: 100%;
+    }
+    #text h1 {
+        width: 100%;
+    }
+}
+

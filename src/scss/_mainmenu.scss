@@ -1,0 +1,19 @@
+nav#mainmenu {
+    margin-top: 1%;
+    padding-bottom: 1%;
+    border-bottom: 1px solid $primary-color;
+    li {
+        display: inline;
+        margin: 2%;
+    }
+    a:link, a:visited {
+        text-decoration: none;
+        color: $primary-color;
+    }
+    a:hover {
+        color: darken($primary-color, 15);
+    }
+    a:active {
+        color: lighten($primary-color, 15);
+    }
+}

@@ -1,0 +1,48 @@
+@import 'primary';
+
+#wrapper {
+    position: relative;
+    width: 100%;
+}
+
+.dropbtn {
+    background-color: $second-color;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    width: 100%;
+    max-width: 600px;
+    text-align: center;
+}
+
+.dropbtn:hover, .dropbtn:focus {
+    background-color: darken($second-color, 15);
+}
+
+.dropdown {
+    display: inline-block;
+    width: 100%;
+    position: fixed;
+    top: 0;
+}
+
+.dropdown-content {
+    display: none;
+    background-color: #f1f1f1;
+    min-width: 600px;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown a:hover {background-color: #ddd;}
+
+.show {display: block;}
